@@ -46,6 +46,14 @@ export default function Home({ allPostsData }) {
               <Date dateString={'2023-12-28'}/>
             </small>
           </li>
+          <li>
+            <br />
+            <Link href="/movies">Top 20 Movies</Link>
+            <br />
+            <small className={utilStyles.lightText}>
+              <Date dateString={'2023-12-28'}/>
+            </small>
+          </li>
         </ul>
       </section>
     </Layout>
