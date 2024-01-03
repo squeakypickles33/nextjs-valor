@@ -3,9 +3,10 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+// import '../styles/global.css';
 
-const name = 'Derek W';
-export const siteTitle = 'Derek\'s Next.js Website';
+const name = 'Valor Security';
+export const siteTitle = 'Valor Security';
 
 export default function Layout({ children, home }) {
   return (
@@ -14,7 +15,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Valor Secuity has all your ADT security, smart home, and Solar needs."
         />
         <meta
           property="og:image"
@@ -31,7 +32,7 @@ export default function Layout({ children, home }) {
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className={utilStyles.borderNone}
               height={144}
               width={144}
               alt=""
@@ -44,7 +45,7 @@ export default function Layout({ children, home }) {
               <Image
                 priority
                 src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
+                className={utilStyles.borderNone}
                 height={108}
                 width={108}
                 alt=""
@@ -58,7 +59,7 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      {children && <main>{children}</main>}
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
